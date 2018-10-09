@@ -12,6 +12,7 @@ public class Main {
 //		HanNumber();
 //		dungchi();
 //		tile();
+		
 	}
 	
 	public static void divideSum() {
@@ -22,20 +23,20 @@ public class Main {
 		a = scan.nextInt();
 		n = scan.nextInt();
 		
-		// p 가 1인경우 단위분수이다
+		// p 媛� 1�씤寃쎌슦 �떒�쐞遺꾩닔�씠�떎
 		
 	}
 	
 	public static void gamso() {
 		Scanner scan = new Scanner(System.in);
-		int num = 0; // 실제 숫자 값
-		int count = 0; // 개수(몇번 재 인지)
-		int N = scan.nextInt(); // input 값
+		int num = 0; // �떎�젣 �닽�옄 媛�
+		int count = 0; // 媛쒖닔(紐뉖쾲 �옱 �씤吏�)
+		int N = scan.nextInt(); // input 媛�
 		
 		if(N<10){
 			System.out.println(N);
 		}else if(N>1022){
-			System.out.println(-1); // 최대개수는 1022번째 2^10-1 -> 이해는 안감..
+			System.out.println(-1); // 理쒕�媛쒖닔�뒗 1022踰덉㎏ 2^10-1 -> �씠�빐�뒗 �븞媛�..
 		}else {
 			while(num != 0) {
 				
@@ -51,13 +52,13 @@ public class Main {
 		int r = scan.nextInt();
 		int b = scan.nextInt();
 		
-		int w;	// 갈색 가로
-		int l;	// 갈색 세로
+		int w;	// 媛덉깋 媛�濡�
+		int l;	// 媛덉깋 �꽭濡�
 		
 		for(l=1; ; l++){
-			// 갈색 총 개수 % 세로길이 == 0 
+			// 媛덉깋 珥� 媛쒖닔 % �꽭濡쒓만�씠 == 0 
 			if(b % l == 0){
-				w = b/l; // 가로길이 == 총개수/세로길이
+				w = b/l; // 媛�濡쒓만�씠 == 珥앷컻�닔/�꽭濡쒓만�씠
 				
 				if(r == l*2 + 2*w + 4){
 					System.out.println((w+2) +" "+ (l+2));
@@ -72,18 +73,18 @@ public class Main {
 		int result[];
 		int N = scan.nextInt();
 		result = new int[N];
-//		N행 2열 배열
+//		N�뻾 2�뿴 諛곗뿴
 		int arr[][] = new int[N][2];
 		for(int i=0; i<N; i++){
 			result[i] = 1;
-			arr[i][0] = scan.nextInt();	// 몸무게
-			arr[i][1] = scan.nextInt(); // 키
+			arr[i][0] = scan.nextInt();	// 紐몃Т寃�
+			arr[i][1] = scan.nextInt(); // �궎
 		}
 		
 		for(int i=0; i<N; i++){
 			for(int j=0; j<N; j++){
 				if(arr[i][0] > arr[j][0] && arr[i][1] > arr[j][1]){
-					// i번째가 더 므다 따라서 j번째의 순위를 +해서 한순위 뒤로 미뤄준다.
+					// i踰덉㎏媛� �뜑 誘��떎 �뵲�씪�꽌 j踰덉㎏�쓽 �닚�쐞瑜� +�빐�꽌 �븳�닚�쐞 �뮘濡� 誘몃쨪以��떎.
 					result[j]++;
 				}
 			}
@@ -99,7 +100,7 @@ public class Main {
 		Scanner scan = new Scanner(System.in);
 		int n = scan.nextInt();
 		
-		// n이 두자리수 인 경우 모두 한수임
+		// n�씠 �몢�옄由ъ닔 �씤 寃쎌슦 紐⑤몢 �븳�닔�엫
 		if(n<100) {
 			System.out.println(n);
 		} else {
@@ -119,7 +120,7 @@ public class Main {
 		int num1 = n/100 % 10;
 		int num2 = n/10 % 10;
 		int num3 = n % 10;
-		// 중간 * 2 == 1번째3번째값의 합 이면 등차수열이다
+		// 以묎컙 * 2 == 1踰덉㎏3踰덉㎏媛믪쓽 �빀 �씠硫� �벑李⑥닔�뿴�씠�떎
 		if(num2 * 2 == num1+num3){
 			return 1;
 		}
@@ -159,13 +160,13 @@ public class Main {
 	}	
 	public static void calculateDate(){
 		Scanner sc = new Scanner(System.in);
-		// 입력받을 상수들
+		// �엯�젰諛쏆쓣 �긽�닔�뱾
 		int E = sc.nextInt();
 		int S = sc.nextInt();
 		int M = sc.nextInt();
-		// 비교할 값들
+		// 鍮꾧탳�븷 媛믩뱾
 		int e=1, s=1, m=1;
-		// 세 값이 같아질때까지 반복
+		// �꽭 媛믪씠 媛숈븘吏덈븣源뚯� 諛섎났
 		for(int i=1;; i++){
 			if(e == E && s == S && m == M){
 				System.out.println(i);
@@ -188,8 +189,8 @@ public class Main {
 	}
 	
 	public static void remotecontrol(){
-		int N; // 이동하려는 채널  (0<=N<=500000) 
-		int M; // 고장난 버튼 개수		
+		int N; // �씠�룞�븯�젮�뒗 梨꾨꼸  (0<=N<=500000) 
+		int M; // 怨좎옣�궃 踰꾪듉 媛쒖닔		
 		Scanner sc = new Scanner(System.in);
 		
 		for(int i=0; i<=500000; i++){
@@ -225,7 +226,7 @@ public class Main {
 			sum += arr[i];
 		}
 		
-		// 오름차순 정렬
+		// �삤由꾩감�닚 �젙�젹
 		Arrays.sort(arr);
 		
 		for(int i=0; i<N-1; i++){
