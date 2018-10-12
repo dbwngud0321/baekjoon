@@ -8,20 +8,23 @@ public class baekjoon2920 {
 	static int []arr;
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+		String result = "";
 		arr = new int[N];
 		for(int i=0; i<N; i++) {
 			arr[i] = scan.nextInt();
 		}
 
-		for(int i=0; i<N; i++) {
-			if(arr[i]!=1 || arr[i]!=8) {
-				System.out.println("mixed");
-			}else if(arr[i]==1){
-				
-			}else if(arr[i]==8) {
-				
+		for(int i=0; i<N-1; i++) {
+			if(arr[i+1]-arr[i] == 1) {
+				result = "ascending";
+			}else if(arr[i+1]-arr[i] == -1){
+				result = "descending";
+			}else {
+				result = "mixed";
+				break;
 			}
 		}
+		System.out.println(result);
 	}
 
 }
