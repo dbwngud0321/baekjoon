@@ -1,4 +1,4 @@
-package codeplus;
+package simulater;
 
 import java.util.Scanner;
 
