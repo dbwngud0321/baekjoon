@@ -12,7 +12,8 @@ public class FrogJmp {
 		}
 		*/
 //		return jmp;
-		return (int)Math.ceil((Y-X)/ (double)D);
+		// Y-X의 차이만큼 D가 몇번을 더해져야 하는지 구하는 방향
+		return (int)Math.ceil((Y-X)/ (double)D); //ceil 값 올림(소수)
 	}
 	
 	public static void main(String[] args) {
