@@ -6,7 +6,7 @@ public class OddOccurrencesInArray {
 
 	public static int solution(int[] A) {
 		int result = 0;
-		int count = 0;
+		/*int count = 0;
 		for(int i=0; i<A.length; i++){
 			for(int j=0; j<i; j++){
 				if(A[i] == A[j]){
@@ -18,8 +18,11 @@ public class OddOccurrencesInArray {
 			} else {
 				count = 0;
 			}
-		}
+		}*/
 		
+		for(int i: A){
+			result ^= i;
+		}
 		
 		return result;
 	}
