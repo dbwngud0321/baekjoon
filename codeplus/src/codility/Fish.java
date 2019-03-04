@@ -7,7 +7,14 @@ public class Fish {
 	public static int solution(int[] A, int[] B){
 		int result = 0;
 		Stack<Integer> stack = new Stack<Integer>();
-		
+		// B index 가 1인 값을 stack에 넣자
+		for(int i: B){
+			if(i == 1)
+				stack.push(i);
+		}
+		for(int i: A) {
+			
+		}
 		return result;
 	}
 	public static void main(String[] args) {
