@@ -5,17 +5,26 @@ import java.util.Stack;
 public class Fish {
 	
 	public static int solution(int[] A, int[] B){
-		int result = 0;
+		int N = A.length;
+		int alive = 0;
 		Stack<Integer> stack = new Stack<Integer>();
-		// B index 가 1인 값을 stack에 넣자
-		for(int i: B){
-			if(i == 1)
-				stack.push(i);
+		for(int i=0; i<N; i++){
+			if(B[i]==1){
+				stack.push(A[i]);
+			} else {
+				while(!stack.isEmpty()){
+					if(stack.peek() > A[i]){ // 새로운 물고기 사망
+						break;
+					} else {
+						stack.pop();
+					}
+				}
+				if(stack.isEmpty() && B[i]==0){
+					alive++;
+				}
+			}
 		}
-		for(int i: A) {
-			
-		}
-		return result;
+		return alive + stack.size();
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
